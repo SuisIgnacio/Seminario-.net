@@ -1,2 +1,25 @@
-Console.WriteLine("Hola Mundo");
-int i=0;
+// See https://aka.ms/new-console-template for more information
+// no funciona
+double [,] matriz=new double[2,5];
+int x=0;
+for(int i=0;i<2;i++)
+{
+    for(int j=0;j<5;j++)
+    {
+        matriz[i,j]=x;
+        x++;
+    }
+}
+ImprimirMatriz(matriz,"0.0");
+
+void ImprimirMatriz(double [,] matriz,string formatString)
+{
+    double num=0.0;
+    for(int i=0;i<matriz.GetLength(0);i++)
+    {
+        for(int j=0;j<matriz.GetLength(1);j++)
+        {
+            Console.WriteLine($"valor={matriz[i,j]:num}");
+        }
+    }
+}
