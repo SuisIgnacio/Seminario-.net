@@ -1,0 +1,33 @@
+using teoria7;
+
+Auto auto = new Auto();
+Libro libro = new Libro();
+Persona persona = new Persona();
+Perro perro = new Perro();
+Pelicula pelicula = new Pelicula();
+Procesador.Alquilar(pelicula, persona);
+Procesador.Alquilar(libro, persona);
+Procesador.Atender(persona);
+Procesador.Atender(perro);
+Procesador.Devolver(pelicula, persona);
+Procesador.Devolver(libro, persona);
+Procesador.Lavar(auto);
+Procesador.Reciclar(libro);
+Procesador.Reciclar(auto);
+Procesador.Secar(auto);
+Procesador.Vender(auto, persona);
+Procesador.Vender(perro, persona);
+
+
+namespace teoria7;
+
+static class Procesador
+{
+    public static void Atender(IAtendible a) => a.seAtiendeA();
+    public static void Alquilar(IAlquilable a,Persona p)=> a.seAlquilaA(p);
+    public static void Devolver(IAlquilable a,Persona p)=> a.seDevuelve(p);
+    public static void Vender(IVendible v,Persona p)=>v.seVendeA(p);
+    public static void Lavar(ILavable l)=>l.seLava();
+    public static void Secar(ILavable l)=>l.seSeca();
+    public static void Reciclar(IReciclable r)=>r.seRecicla();
+}
