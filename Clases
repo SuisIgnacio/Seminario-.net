@@ -1,0 +1,53 @@
+namespace teoria7;
+
+public class Auto:IVendible,ILavable,IReciclable
+{
+    public void seVendeA(Persona p)
+        =>Console.WriteLine("Vendiendo auto a Persona");
+    public void seLava()
+        =>Console.WriteLine("Lavando Auto");
+    public void seSeca()
+        =>Console.WriteLine("Secando auto");
+    public void seRecicla()
+        =>Console.WriteLine("Reciclando Auto");
+}
+
+namespace teoria7;
+
+public class Libro:IAlquilable, IReciclable
+{
+    public void seAlquilaA(Persona p)
+        =>Console.WriteLine("Alquilando libro a Persona");
+    public void seDevuelve(Persona p)
+        =>Console.WriteLine("Persona devuelve el libro");
+    public void seRecicla()
+        =>Console.WriteLine("Reciclando libro");
+}
+
+namespace teoria7;
+
+public class Pelicula: IAlquilable
+{
+    public void seAlquilaA(Persona p)
+        =>Console.WriteLine("Se alquila pelicula a Persona");
+    public void seDevuelve(Persona p)
+        =>Console.WriteLine("Persona devuelve Pelicula");
+}
+
+namespace teoria7;
+
+public class Perro:IVendible,IAtendible
+{
+    public void seVendeA(Persona p)
+        =>Console.WriteLine("Vendiendo perro a persona");
+    public void seAtiendeA()
+        =>Console.WriteLine("Atendiendo Perro");
+}
+
+namespace teoria7;
+
+public class Persona:IAtendible
+{
+    public void seAtiendeA()
+        =>Console.WriteLine("Atendiendo Persona");
+}
