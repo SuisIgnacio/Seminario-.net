@@ -1,0 +1,36 @@
+namespace teoria7;
+
+interface IAlquilable
+{
+    void seAlquilaA(Persona p);
+    void seDevuelve(Persona p);
+}
+
+namespace teoria7;
+
+interface IAtendible
+{
+    public void seAtiendeA();
+}
+
+namespace teoria7;
+
+interface ILavable
+{
+    public void seLava();
+    public void seSeca();
+}
+
+namespace teoria7;
+
+interface IReciclable
+{
+    public void seRecicla();
+}
+
+namespace teoria7;
+
+interface IVendible
+{
+    public void seVendeA(Persona p);
+}
